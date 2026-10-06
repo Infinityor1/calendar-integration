@@ -4,7 +4,9 @@
     "type": "module",
     "scripts": {
         "build": "vite build",
-        "dev": "vite"
+        "dev": "vite",
+        "desktop": ".\\CalendarExplorer.exe",
+        "desktop:build": "dotnet publish desktop/CalendarExplorer.csproj -c Release -r win-x64 --self-contained false -p:PublishSingleFile=true -p:IncludeNativeLibrariesForSelfExtract=true -p:DebugType=None -o ."
     },
     "devDependencies": {
         "@tailwindcss/vite": "^4.0.0",
